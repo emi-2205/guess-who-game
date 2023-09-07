@@ -15,8 +15,14 @@ const Navigation = (props) => {
         </Navbar.Brand>
       </Link>
       <Form className="mx-2">
-        {props.loggedIn ? <><LogoutButton logout={props.logout} /><Button onClick={() => navigate('/history')} variant="btn btn-otuline-dark">History</Button></> : <LoginButton />}
+        {props.loggedIn ? <><Button className='nav-button' onClick={() => navigate('/history')} variant="btn btn-otuline-dark">History</Button><LogoutButton logout={props.logout} /></> : <LoginButton />}
       </Form>
+      {props.loggedIn ?
+        <Navbar.Collapse className="justify-content-end me-4">
+          <Navbar.Text style={{ color: 'black' }}>
+            Signed in as: <strong>{props.user.name}</strong> 
+          </Navbar.Text>
+        </Navbar.Collapse> : []}
     </Navbar>
   );
 }

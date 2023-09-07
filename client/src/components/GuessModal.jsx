@@ -21,11 +21,7 @@ const GuessModal = (props) => {
     };
 
     const handleSubmit = () => {
-        if(selectedProperty && selectedValue){
-            props.handlepropertyguess(selectedProperty, selectedValue);
-            props.handlesubmit();
-        }
-        // (selectedProperty && selectedValue) ? (props.cb(selectedProperty, selectedValue), props.cb2()) : [];
+        (selectedProperty && selectedValue) ? (props.handlepropertyguess(selectedProperty, selectedValue), props.handlesubmit()) : [];
         setSelectedProperty('');
         setSelectedValue('');
     };

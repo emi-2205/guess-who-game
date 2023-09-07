@@ -20,11 +20,11 @@ import API from '../src/API';
 function App() {
 
   const [difficulty, setDifficulty] = useState(24);
-  const siglaURL = '/sigla.mp3';
   const [isPlaying, setIsPlaying] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
-
+  const siglaURL = '/sigla.mp3';
+  
 
   const handleLogin = async (credentials) => {
     try {
@@ -79,7 +79,7 @@ function App() {
         {isPlaying ? <ReactHowler
           src={siglaURL}
           playing={isPlaying}
-          volume={0.05}
+          volume={0.06}
           loop={true}
         /> : []}
 

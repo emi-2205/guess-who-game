@@ -146,7 +146,7 @@ function LoginPage(props) {
 
 function NotFoundLayout() {
   return (
-    <Container fluid className="vh-100 d-flex align-items-center flex-column justify-content-center">
+    <Container id="not-found-page" fluid className="vh-100 d-flex align-items-center flex-column justify-content-center">
       <h2>This is not the route you are looking for!</h2>
       <Link to="/">
         <Button variant="primary" className='guess-button'>Go Home!</Button>

@@ -2,9 +2,7 @@ import { Button, Col, Row, Alert } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { Item } from "./Item"
 
-function MatchAlert({ matchResult, guesses, user }) {
-
-    console.log(matchResult);
+function MatchAlert({ matchResult, guesses }) {
 
     let message = '';
     let variant = '';
@@ -42,7 +40,6 @@ function MatchAlert({ matchResult, guesses, user }) {
 
 
 function GuessAlert({ guessed }) {
-    console.log(guessed);
     let variant = '';
     let message = '';
     guessed ? (variant = "success", message = "You guessed right!") : (variant = "warning", message = "You guessed wrong!")
