@@ -1,0 +1,283 @@
+/*
+ * [2022/2023]
+ * 01UDFOV Applicazioni Web I / 01TXYOV Web Applications I
+ * Lab 11
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@700&display=swap');
+
+:root {
+  --red-700: #842029;
+  --red-600: #b02a37;
+  --red-500: #dc3545;
+  --red-400: #e35d6a;
+  --red-300: #ea868f;
+  --orange-500: #fd7e14;
+  --orange-400: #fd9843;
+  --orange-400-transparent1: rgba(253, 152, 67, 0.84);
+  --orange-300: #feb272;
+  --yellow-500: #ffc107;
+  --yellow-500-transparent1: rgba(255, 193, 7, 0.44);
+  --yellow-400: #ffcd39;
+  --yellow-300: #ffda6a;
+  /* --yellow-300-transparent1: rgba(255, 193, 7, 0.44); */
+  --gray-500: #adb5bd;
+  --gray-400: #ced4da;
+  --white: #fff;
+  --black: #171614;
+}
+
+#home-page {
+  background-image: url('/background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Prevent repeating the image */
+  background-position: center;
+  background-color: var(--orange-400);
+  width: 100%;
+  height: 93vh;
+  margin-top: 7vh;
+}
+
+#match-page {
+  background-image: url('/background2.svg');
+  background-color: var(--orange-400);
+  width: 100%;
+  height: 93vh;
+  padding-top: 7vh;
+}
+
+#history-page {
+  background-image: url('/background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Prevent repeating the image */
+  background-position: center;
+  background-color: var(--orange-400);
+  width: 100%;
+  height: 93vh;
+  margin-top: 7vh;
+}
+
+.history-container {
+  overflow-x: auto;
+}
+
+.history-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 60vh;
+  background-color: var(--yellow-300);
+  border-radius: 0.5rem;
+  animation: fadeInAnimation 0.6s ease-in-out forwards;
+}
+
+.table>:not(caption)>*>* {
+  background-color: transparent !important;
+  border-style: none;
+}
+
+
+/* Styles related to NavBar */
+.navbar {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: var(--yellow-300) !important;
+  color: var(--black);
+  height: 7vh;
+}
+
+.keep-white-space {
+  white-space: pre-wrap;
+}
+
+.img-thumbnail {
+  border: 0;
+  border-radius: 0;
+}
+
+.item-image {
+  background-color: var(--yellow-500-transparent1);
+  padding: 0px;
+}
+
+.item-name {
+  background-color: var(--yellow-300);
+  font-family: 'Kadva', serif;
+  font-weight: bold;
+  font-size: larger;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    /* Initial opacity */
+    transform: translateY(-20px);
+    /* Initial transform */
+  }
+
+  to {
+    opacity: 1;
+    /* Final opacity */
+    transform: translateY(0);
+    /* Final transform */
+  }
+}
+
+.animation{
+  animation: fadeInAnimation 0.6s ease-in-out forwards;
+}
+
+.match-container {
+  overflow-x: auto;
+  padding-top: 3rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  animation: fadeInAnimation 0.6s ease-in-out forwards;
+}
+
+.item {
+  width: fit-content;
+  max-width: 10rem;
+}
+
+.match-alert {
+  z-index: 1050
+}
+
+.guess-button {
+  background-color: var(--red-500);
+  border-color: var(--red-500);
+}
+
+.guess-button:hover {
+  color: white;
+  background-color: var(--red-700);
+  border-color: var(--black);
+}
+
+.btn.guess-button:active {
+  color: white;
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+.btn.guess-button:disabled {
+  color: white;
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+.btn-close {
+  display: none;
+}
+
+.close-button {
+  background-color: gray-100;
+  border-color: gray-100;
+}
+
+.modal {
+  /* width: 100; */
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content {
+  width: auto;
+}
+
+.menu {
+  width: min-content;
+  height: min-content;
+  padding-right: 4.5rem;
+  padding-left: 4.5rem;
+  padding-top: 2.8rem;
+  padding-bottom: 2.5rem;
+  background-color: var(--yellow-300);
+  border-radius: 0.5rem;
+  animation: fadeInAnimation 0.6s ease-in-out forwards;
+}
+
+.btn.difficulty-button {
+  background-color: white;
+}
+
+.btn.difficulty-button:hover {
+  background-color: var(--gray-400);
+}
+
+.start-button {
+  font-size: x-large;
+}
+
+@media screen and (max-width: 992px) {
+  /* Small devices (e.g. smartphones) */
+  /* Add styles specific to small devices here */
+
+  .history-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 75vh;
+    background-color: var(--yellow-300);
+    border-radius: 0.5rem;
+    animation: fadeInAnimation 0.6s ease-in-out forwards;
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: max-content;
+  }
+
+  .match-container {
+    overflow-x: auto;
+    padding: 0rem
+  }
+
+  .no-borders {
+    padding: 0;
+    margin: 0;
+  }
+
+  .item {
+    width: fit-content;
+    max-width: 8rem;
+  }
+
+  .item-name {
+    background-color: var(--yellow-300);
+    font-family: 'Kadva', serif;
+    font-size: small;
+  }
+
+  .match-alert {
+    width: max-content;
+    z-index: 1050
+  }
+
+  .guess-container {
+    width: 100%;
+  }
+
+  .guess-button {
+    width: -webkit-fill-available;
+    background-color: var(--red-500);
+    border-color: var(--red-500);
+  }
+
+  .close-button {
+    width: -webkit-fill-available;
+    background-color: gray-100;
+    border-color: gray-100;
+  }
+
+  .catalog {
+    padding: 2px;
+    padding-top: 10px;
+  }
+
+}
