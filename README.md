@@ -82,6 +82,14 @@ that the user is trying to guess
 - `HistoryTable` (in `HistoryTable.js`): This component renders all the history of the user
 
 # Usage info
+```
+cd server
+node index.js
+cd ..
+cd client
+npm run dev
+```
+open your browser on `http://localhost:5173/`
 
 ## Example Screenshot
 
